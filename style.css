@@ -4,8 +4,7 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
     min-height: 100vh;
   }
   
@@ -17,6 +16,7 @@ body {
     padding: 28px 18px 24px 18px;
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    flex: 1 0 auto;
   }
   
   h1 {
@@ -341,11 +341,16 @@ body {
     width: 100%;
   }
   
-  .footer-open-source {
+  footer.footer-open-source {
+    width: 100%;
+    background: #fafbfc;
+    border-top: 1.5px solid #e5e7eb;
+    padding: 16px 0 12px 0;
     text-align: center;
-    margin: 32px 0 12px 0;
     color: #666;
     font-size: 1rem;
+    margin-top: 32px;
+    flex-shrink: 0;
   }
   .footer-open-source a {
     color: #2563eb;
@@ -356,4 +361,16 @@ body {
   .footer-open-source a:hover, .footer-open-source a:focus {
     color: #1d4ed8;
   }
+  .footer-open-source a.github-link {
+    color: #111;
+    text-decoration: none;
+    font-size: 1.25em;
+    vertical-align: middle;
+    margin: 0 2px;
+    transition: color 0.15s;
+  }
+  .footer-open-source a.github-link:hover, .footer-open-source a.github-link:focus {
+    color: #444;
+  }
+  
   
