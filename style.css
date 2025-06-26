@@ -341,3 +341,19 @@ body {
     width: 100%;
   }
   
+  .footer-open-source {
+    text-align: center;
+    margin: 32px 0 12px 0;
+    color: #666;
+    font-size: 1rem;
+  }
+  .footer-open-source a {
+    color: #2563eb;
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.15s;
+  }
+  .footer-open-source a:hover, .footer-open-source a:focus {
+    color: #1d4ed8;
+  }
+  
