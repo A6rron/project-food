@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Food Nearby — At Your Risk</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Food Nearby<span>— At Your Risk</span></h1>
+    <hr class="main-divider">
+
+    <section class="events-section" aria-labelledby="events-title-today">
+      <h2 id="events-title-today" class="visually-hidden">Events Today</h2>
+      <div class="events-list-heading">Today</div>
+      <div id="events-list-today"></div>
+    </section>
+    <section class="events-section" aria-labelledby="events-title-future">
+      <h2 id="events-title-future" class="visually-hidden">Future Events</h2>
+      <div class="events-list-heading">Future Dates</div>
+      <div id="events-list-future"></div>
+      <div class="verification-row">
+        <div class="verify-card">
+          <div class="verify-title">Live Verification</div>
+          <hr class="verify-divider">
+          <div class="verify-content">
+            <div class="verify-labels">
+              <div class="verify-label"><i class="fa-regular fa-file"></i> Upload a live photo and video</div>
+            </div>
+          </div>
+        </div>
+        <div class="verify-card">
+          <div class="verify-title">Future Date Verification</div>
+          <hr class="verify-divider">
+          <div class="verify-content">
+            <div class="verify-labels">
+              <div class="verify-label"><i class="fa-regular fa-file"></i> Upload an invite/event poster</div>
+              <div class="verify-label"><i class="fa-regular fa-file"></i> Confirming by catering staff schedule</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="add-event-row">
+      <button class="add-event-btn">Add Event</button>
+    </div>
+  </div>
+
+  <div id="addEventModal" class="modal-overlay hidden">
+    <div class="modal">
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+      <h2>Add New Event</h2>
+      <form id="addEventForm">
+        <label for="eventName">Event Name</label>
+        <input type="text" id="eventName" name="eventName" placeholder="e.g., Wedding, Brithday, Church Event etc" required>
+
+        <label for="eventLocation">Location (Google Maps link only)</label>
+        <input type="url" id="eventLocation" name="eventLocation" placeholder="Paste Google Maps link here" required pattern="https?://(www\.)?google\.[^/]+/maps[^"]*">
+
+        <label for="eventTime">Date & Time</label>
+        <input type="datetime-local" id="eventTime" name="eventTime" required>
+        
+        <label for="eventType">Event Type</label>
+        <div class="radio-group">
+            <label><input type="radio" name="eventType" value="live" checked> Live</label>
+            <label><input type="radio" name="eventType" value="future"> Future</label>
+        </div>
+
+        <button type="submit">Add Event to List</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
