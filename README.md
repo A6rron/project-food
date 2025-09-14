@@ -1,7 +1,7 @@
 # Food Nearby
 
 **Go and eat at your own risk.**  
-A simple, open-source site to find and share live or upcoming free food events near you — weddings, temples, and more.
+A simple, open-source site to find and share live or upcoming free food events near you — weddings, temples, and other events.
 
 ---
 
