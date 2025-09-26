@@ -24,6 +24,18 @@ let mm = String(today.getMonth() + 1).padStart(2, '0');
 let dd = String(today.getDate()).padStart(2, '0');
 let todayStr = `${yyyy}-${mm}-${dd}T18:00`;
 
+// Utility: Generate an ISO-like datetime string offset by days from now
+function generateDateISO(daysFromNow, hour, minute) {
+  const base = new Date();
+  base.setDate(base.getDate() + daysFromNow);
+  const y = base.getFullYear();
+  const m = String(base.getMonth() + 1).padStart(2, '0');
+  const d = String(base.getDate()).padStart(2, '0');
+  const hh = String(hour).padStart(2, '0');
+  const mmn = String(minute).padStart(2, '0');
+  return `${y}-${m}-${d}T${hh}:${mmn}`;
+}
+
 let events = [
   {
     name: 'Wedding',
@@ -31,6 +43,76 @@ let events = [
     displayLocation: 'Sri Lakshmi Hall',
     time: todayStr,
     type: 'live'
+  },
+  {
+    name: 'Community Feast',
+    location: 'https://www.google.com/maps/place/Town+Hall',
+    displayLocation: 'Town Hall',
+    time: generateDateISO(1, 12, 30),
+    type: 'live'
+  },
+  {
+    name: 'Temple Annadhanam',
+    location: 'https://www.google.com/maps/place/Meenakshi+Temple',
+    displayLocation: 'Meenakshi Temple',
+    time: generateDateISO(2, 13, 0),
+    type: 'future'
+  },
+  {
+    name: 'Corporate CSR Lunch',
+    location: 'https://www.google.com/maps/place/Tech+Park',
+    displayLocation: 'Tech Park',
+    time: generateDateISO(3, 14, 0),
+    type: 'live'
+  },
+  {
+    name: 'Church Gathering',
+    location: 'https://www.google.com/maps/place/St+Marys+Church',
+    displayLocation: "St Mary's Church",
+    time: generateDateISO(4, 11, 30),
+    type: 'future'
+  },
+  {
+    name: 'College Alumni Meet',
+    location: 'https://www.google.com/maps/place/City+College',
+    displayLocation: 'City College',
+    time: generateDateISO(5, 17, 0),
+    type: 'future'
+  },
+  {
+    name: 'NGO Food Drive',
+    location: 'https://www.google.com/maps/place/Central+Library',
+    displayLocation: 'Central Library',
+    time: generateDateISO(6, 12, 0),
+    type: 'live'
+  },
+  {
+    name: 'Community Kitchen',
+    location: 'https://www.google.com/maps/place/Community+Center',
+    displayLocation: 'Community Center',
+    time: generateDateISO(7, 19, 0),
+    type: 'future'
+  },
+  {
+    name: 'Park Picnic Giveaway',
+    location: 'https://www.google.com/maps/place/River+Park',
+    displayLocation: 'River Park',
+    time: generateDateISO(8, 13, 30),
+    type: 'live'
+  },
+  {
+    name: 'Sports Club Event',
+    location: 'https://www.google.com/maps/place/Sports+Complex',
+    displayLocation: 'Sports Complex',
+    time: generateDateISO(10, 18, 15),
+    type: 'future'
+  },
+  {
+    name: 'Music Night Snacks',
+    location: 'https://www.google.com/maps/place/Amphitheatre',
+    displayLocation: 'Amphitheatre',
+    time: generateDateISO(12, 20, 0),
+    type: 'future'
   },
   {
     name: 'Event Tomorrow',
