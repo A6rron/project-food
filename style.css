@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
@@ -355,13 +355,12 @@ body {
     flex-shrink: 0;
   }
   .footer-open-source a {
-    color: #2563eb;
+    color: inherit;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.15s;
   }
   .footer-open-source a:hover, .footer-open-source a:focus {
-    color: #1d4ed8;
+    color: inherit;
   }
   .footer-open-source a.github-link {
     color: #111;
